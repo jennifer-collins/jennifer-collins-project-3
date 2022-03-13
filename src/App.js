@@ -34,15 +34,22 @@ function App() {
   console.log(affirmation);
   
   return (
-    <div>
+    <div className='wrapper'>
       <header>
         {/* App title/header */}
-        <h1>words of affirmation</h1>
+        {/* <h1>words of affirmation</h1> */}
+        <h1>af·firm·a·tion</h1>
+        {/* <h3>the action or process of affirming something or being affirmed.</h3> */}
+        <h3>(1) the act of affirming</h3>
+        <h3>(2) something affirmed - a positive assertion</h3>
         {/* App description */}
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod doloremque labore et obcaecati esse veniam inventore voluptatem, nihil nulla itaque!</p>
+        <div className="appDescription">
+        <p>Affirmations are positive reminders to motivate yourself, encourage positive changes in your life, or combat negative thoughts.</p>
+        <p>Sometimes life can be a little tough, and these affirmations can help to shift your mindset. Click the button below to find an affirmation that speaks to you.</p>
+        </div>
       </header>
 
-      <section>
+      <section className='buttonComponent'>
 
         {/* If I add this to it's own component this is how i would pass the info/function via props */}
         {/* <button onClick={props.getRandomPhrase}>Get Affirmations</button> */}
@@ -58,7 +65,7 @@ function App() {
         } */}
       </section>
 
-      <section>
+      <section className='displayAffirmations'>
         <DisplayAffirmations affirmationPhrase={affirmation}/>
       </section>
 

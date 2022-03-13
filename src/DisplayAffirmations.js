@@ -1,7 +1,7 @@
 function DisplayAffirmations(props) {
     console.log(props);
     return(
-        <p>{props.affirmationPhrase}</p>
+        <p className="affirmation typewriter">{props.affirmationPhrase}</p>
     )
 }
 
