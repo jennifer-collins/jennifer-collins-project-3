@@ -35,9 +35,10 @@ h1 {
 }
 
 .affirmation {
-  font-family: 'Shadows Into Light', cursive;
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Kalam', cursive;
   font-size: 1.5rem;
-  color: #000;
+  color: #006B88;
   letter-spacing: 1.5px;
   /* text-align: center; */
 }
@@ -115,6 +116,7 @@ button {
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 30px;
 }
 
 button:hover,
