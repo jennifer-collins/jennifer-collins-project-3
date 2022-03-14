@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import DisplayAffirmations from './DisplayAffirmations';
+import GetAffirmations from './GetAffirmations';
 
 function App() {
 
@@ -54,8 +55,10 @@ function App() {
         {/* If I add this to it's own component this is how i would pass the info/function via props */}
         {/* <button onClick={props.getRandomPhrase}>Get Affirmations</button> */}
 
-        <button onClick={handleClick}>Get Affirmation</button>
-        {/* <Button getRandomPhrase={handleClick}/> */}
+        {/* This was the original solution */}
+        {/* <button onClick={handleClick}>Get Affirmation</button> */}
+        
+        <GetAffirmations getRandomPhrase={handleClick}/>
         {/* {
           affirmationData.map((affirmation) => {
             return(
