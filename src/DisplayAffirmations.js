@@ -16,12 +16,11 @@ function DisplayAffirmations(props) {
 
     // }, [props])
     
-    
-    
     return(
         <div>
 
             {/* {
+                
                 displayPhrase ?
                 <p className="affirmation typewriter">{props.affirmationPhrase}</p>
                 : null    
