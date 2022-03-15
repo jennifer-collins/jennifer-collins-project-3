@@ -75,7 +75,7 @@ p {
   letter-spacing: 0.1rem;
   padding: 5% 0;
   line-height: 2rem;
-  /* text-align: center; */
+  text-align: center;
 }
 
 /* .typewriter {
