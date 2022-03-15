@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+// import {useEffect, useState} from 'react'
 
 function DisplayAffirmations(props) {
     console.log(props);
@@ -27,7 +27,7 @@ function DisplayAffirmations(props) {
             } */}
 
         {
-        props.affirmationPhrase != "" ? 
+        props.affirmationPhrase !== "" ? 
         <p className="affirmation typewriter">{props.affirmationPhrase}</p>
         : null
         }
