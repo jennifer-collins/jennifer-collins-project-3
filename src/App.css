@@ -25,10 +25,16 @@ html {
   margin: 0 auto;
 }
 
-/* body {
-  background-image: url(../assets/manik-roy-yGx-xAGwHQs-unsplash.jpg);
+body {
+  /* background-image: url(../assets/manik-roy-yGx-xAGwHQs-unsplash.jpg); */
+  background-image: url(../assets/loretta-rosa-wAEWQ8J-kXw-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+}
+
+/* body {
+  background-color: #DAD9DE;
 } */
 
 /* Font Styles */
@@ -37,15 +43,38 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 3rem;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+  margin-bottom: 2%;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  line-height: 26px;
+  margin-bottom: 2%;
 }
 
 .affirmation {
   /* font-family: 'Shadows Into Light', cursive; */
   font-family: 'Kalam', cursive;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #006B88;
-  letter-spacing: 1.5px;
+  /* letter-spacing: 1.5px; */
+  letter-spacing: 0.1rem;
+  padding: 5% 0;
+  line-height: 2rem;
   /* text-align: center; */
 }
 
@@ -93,12 +122,16 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(216,214,219,0.6);
+  margin-top: 5%;
 }
 
 .appDescription {
   display: flex;
   flex-direction: column;
-  width: 70%;  
+  /* width: 70%; */
+  margin-bottom: 2%;
+  text-align: center;  
 }
 
 .buttonComponent {
@@ -112,13 +145,15 @@ button {
 }
 
 button {
-    color: paleturquoise;
+    color: #580939;
     background-color: transparent;
     padding: 18px 36px;
-    border: 2px solid black;
-    font-size: 0.8rem;
-    font-weight: bold;
+    border: 2px solid #580939;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.2rem;
+    letter-spacing: 0.1rem;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
@@ -127,8 +162,10 @@ button {
 
 button:hover,
 button:focus {
-  background-color: blueviolet;
-  color: black;
+  /* background-color: #B9B7C6; */
+  background-color: #580939;
+  color: #FFF;
+  border: 2px solid #580939;
 }
 
 
@@ -136,4 +173,15 @@ button:focus {
   display: flex;
   text-align: center;
   justify-content: center;
+  margin: 5% 0;
+  background-color: rgba(216,214,219,0.6);
+  /* background-image: url('../assets/loretta-rosa-wAEWQ8J-kXw-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* box-shadow: 5px 5px #B9B7C6; */
+  /* height: 20vh; */
 }
+
+/* .displayAffirmations p {
+  padding: 5% 2%;
+} */

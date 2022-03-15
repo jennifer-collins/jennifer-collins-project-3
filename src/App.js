@@ -69,7 +69,9 @@ function App() {
       </section>
 
       <section className='displayAffirmations'>
-        <DisplayAffirmations affirmationPhrase={affirmation}/>
+        <DisplayAffirmations affirmationPhrase={affirmation}
+          // emptyPhrase={affirmationData}
+        />
       </section>
 
     </div>
