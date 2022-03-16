@@ -1,7 +1,9 @@
 function GetAffirmations(props) {
     console.log(props, 'hello!');
     return(
-        <button onClick={props.getRandomPhrase}>Get Affirmations</button>
+        <section className='buttonComponent'>
+            <button onClick={props.getRandomPhrase}>Get Affirmations</button>
+        </section>
     )
 }
 

@@ -5,7 +5,7 @@ import DisplayAffirmations from './DisplayAffirmations';
 import GetAffirmations from './GetAffirmations';
 
 // Firebase Import
-import { getDatabase, ref, onValue, push } from 'firebase/database';
+import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 import firebase from './firebase';
 import SavedAffirmations from './SavedAffirmations';
 
@@ -72,10 +72,16 @@ function App() {
     push(dbRef, affirmation)
     // console.log(affirmation);
   }
+
+  const handleRemovePhrase = (phraseKey) => {
+    const database = getDatabase(firebase);
+    const dbRef = ref(database, `/${phraseKey}`)
+    remove(dbRef)
+  }
   
   return (
-    <div className='wrapper'>
-      <header>
+    <div className='app'>
+      <header className='wrapper'>
         {/* App title/header */}
         {/* <h1>words of affirmation</h1> */}
         <h1>af·firm·a·tion</h1>
@@ -87,9 +93,12 @@ function App() {
         <p>Affirmations are positive reminders to motivate yourself, encourage positive changes in your life, or combat negative thoughts.</p>
         <p>Sometimes life can be a little tough, and these affirmations can help to shift your mindset. Click the button below to find an affirmation that speaks to you.</p>
         </div>
+
+        {/* Button Component Import */}
+        <GetAffirmations getRandomPhrase={handleClick} />
       </header>
 
-      <section className='buttonComponent'>
+      {/* <section className='buttonComponent'> */}
 
         {/* If I add this to it's own component this is how i would pass the info/function via props */}
         {/* <button onClick={props.getRandomPhrase}>Get Affirmations</button> */}
@@ -97,7 +106,7 @@ function App() {
         {/* This was the original solution */}
         {/* <button onClick={handleClick}>Get Affirmation</button> */}
         
-        <GetAffirmations getRandomPhrase={handleClick}/>
+        {/* <GetAffirmations getRandomPhrase={handleClick}/> */}
         {/* {
           affirmationData.map((affirmation) => {
             return(
@@ -105,16 +114,21 @@ function App() {
             )
           })
         } */}
-      </section>
-
-      <section className='displayAffirmations'>
-        <DisplayAffirmations affirmationPhrase={affirmation}
-          saveButton={handleFirebase}
+      {/* </section> */}
+      <main className='wrapper'>
+        {/* <section className='displayAffirmations'> */}
+          <DisplayAffirmations affirmationPhrase={affirmation}
+            saveButton={handleFirebase}
+          />
+        {/* </section> */}
+        
+        <SavedAffirmations savedPhrases={returnedPhrases}
+        deleteButton={handleRemovePhrase}
         />
-      </section>
-      
-      <SavedAffirmations savedPhrases={returnedPhrases}/>
-
+      </main>
+      <footer>
+        <p>Created by Jennifer Collins at Juno College</p>
+      </footer>
     </div>
   );
 }

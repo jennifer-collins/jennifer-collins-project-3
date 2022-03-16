@@ -28,10 +28,10 @@ function DisplayAffirmations(props) {
 
         {
         props.affirmationPhrase !== "" ? 
-        <div>
+        <section className='displayAffirmations'>
             <p className="affirmation typewriter">{props.affirmationPhrase}</p>
             <button onClick={props.saveButton}>Save Affirmation</button>
-        </div>
+        </section>
             : null
         }
         
