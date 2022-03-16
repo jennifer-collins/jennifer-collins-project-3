@@ -4,11 +4,19 @@ import axios from 'axios';
 import DisplayAffirmations from './DisplayAffirmations';
 import GetAffirmations from './GetAffirmations';
 
+// Firebase Import
+import { getDatabase, ref, onValue, push } from 'firebase/database';
+import firebase from './firebase';
+import SavedAffirmations from './SavedAffirmations';
+
 function App() {
 
   // Save API data in STATE
   const [affirmationData, setAffirmationData] = useState({});
   const [affirmation, setAffirmation] = useState('');
+
+  //Firebase Data in STATE
+  const [returnedPhrases, setReturnedPhrases] = useState([]);
 
   // Make the API call using axios/useEffect
   useEffect( () => {
@@ -33,6 +41,37 @@ function App() {
     setAffirmation(randomAffirmation.phrase)
   }
   console.log(affirmation);
+
+
+  //FIREBASE
+
+  useEffect(() => {
+    const database = getDatabase(firebase)
+    const dbRef = ref(database)
+    onValue(dbRef, (response) => {
+      console.log(response.val());
+      const savedArray = []
+      const data = response.val()
+      for (let propertyName in data) {
+      savedArray.push({
+        key: propertyName,
+        name: data[propertyName]
+      });
+      console.log(savedArray);
+    }
+    setReturnedPhrases(savedArray);
+    });
+  }, [])
+  console.log(returnedPhrases);
+
+
+  const handleFirebase = () => {
+    console.log('click here!');
+    const database = getDatabase(firebase)
+    const dbRef = ref(database)
+    push(dbRef, affirmation)
+    // console.log(affirmation);
+  }
   
   return (
     <div className='wrapper'>
@@ -70,9 +109,11 @@ function App() {
 
       <section className='displayAffirmations'>
         <DisplayAffirmations affirmationPhrase={affirmation}
-          // emptyPhrase={affirmationData}
+          saveButton={handleFirebase}
         />
       </section>
+      
+      <SavedAffirmations savedPhrases={returnedPhrases}/>
 
     </div>
   );
