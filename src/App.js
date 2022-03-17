@@ -84,8 +84,8 @@ function App() {
       <header className='wrapper'>
         {/* App title/header */}
         <h1>af·firm·a·tion</h1>
-        <h3>(1) the act of affirming</h3>
-        <h3>(2) something affirmed - a positive assertion</h3>
+        <h3><span className='number'>(1)</span> the act of affirming</h3>
+        <h3><span className='number'>(2)</span> something affirmed<span className='nextLine'> - a positive assertion</span></h3>
         {/* App description */}
         <div className="appDescription">
         <p>Affirmations are positive reminders to motivate yourself, encourage positive changes in your life, or combat negative thoughts.</p>
@@ -123,7 +123,7 @@ function App() {
         />
       </main>
       <footer>
-        <p>Created by Jennifer Collins at Juno College</p>
+        <p>Created by <a href="https://github.com/jennifer-collins" target="blank" rel="noopener">Jennifer Collins</a> at <a target="_blank" rel="noopener" href="https://junocollege.com/">Juno College</a></p>
       </footer>
     </div>
   );

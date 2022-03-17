@@ -9,7 +9,7 @@ function SavedAffirmations(props) {
                         <li key={phrase.key}>
                             {/* <button className="removeButton" onClick={() => props.deleteButton(phrase.key)}><i class="fa-solid fa-x"></i></button> */}
 
-                            <button className="removeButton" onClick={() => props.deleteButton(phrase.key)}>x</button>
+                            <button className="removeButton" onClick={() => props.deleteButton(phrase.key)}>remove</button>
 
                             <p className="affirmation">{phrase.name}</p>
 

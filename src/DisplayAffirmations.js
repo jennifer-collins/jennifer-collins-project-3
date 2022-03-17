@@ -17,7 +17,7 @@ function DisplayAffirmations(props) {
     // }, [props])
     
     return(
-        <div>
+        <section className='displayAffirmations'>
 
             {/* {
                 
@@ -28,15 +28,14 @@ function DisplayAffirmations(props) {
 
         {
         props.affirmationPhrase !== "" ? 
-        <section className='displayAffirmations'>
+        <div>
             <p className="affirmation typewriter">{props.affirmationPhrase}</p>
             <button onClick={props.saveButton}>Save Affirmation</button>
-        </section>
+        </div>
             : null
         }
         
-        
-        </div>
+        </section>
         
         // <p className="affirmation typewriter">{props.affirmationPhrase}</p>
     )

@@ -40,9 +40,17 @@ ul {
   list-style: none;
 }
 
-/* body {
-  background-color: #DAD9DE;
-} */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 2px solid #580939;
+  color: #580939;
+}
+
 
 /* Font Styles */
 
@@ -139,6 +147,11 @@ button:focus {
   border: 2px solid #580939;
 }
 
+.displayAffirmations button {
+  margin-bottom: 5%;
+}
+
+
 /* SavedAffirmations.js Button Styling */
 
 .removeButton {
@@ -170,7 +183,7 @@ button:focus {
   /* justify-content: center; */
   margin: 5% 0;
   background-color: rgba(216,214,219,0.6);
-  padding: 2% 0;
+  /* padding: 2% 0; */
 }
 
 /* .displayAffirmations p {
@@ -182,7 +195,7 @@ button:focus {
   flex-direction: column;
   align-items: center;
   margin: 5% 0;
-  padding: 2% 0;
+  padding: 5% 0;
   background-color: rgba(216,214,219,0.6);
 }
 
@@ -191,6 +204,7 @@ button:focus {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #580939;
 }
 
 .savedAffirmations .affirmation {
@@ -198,6 +212,7 @@ button:focus {
   /* margin-bottom: 1%; */
   margin-bottom: 0;
   margin-right: 30px;
+  text-align: left;
 }
 
 footer p {
@@ -205,4 +220,107 @@ footer p {
   margin-bottom: 0;
   text-align: center;
   background-color: rgb(216,214,219);
+}
+
+/* Media Queries */
+
+@media (max-width: 775px) {
+  header h3 {
+    padding: 0 5%;
+  }
+
+  .appDescription {
+    padding-top: 2%;
+  }
+  
+  .nextLine {
+    display: block;
+    text-align: center;
+  }
+
+  .savedAffirmations li {
+    padding: 0 2%;
+  }
+
+  .displayAffirmations {
+    padding: 0 2%;
+  }
+
+  .displayAffirmations button {
+    margin-bottom: 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .affirmation,
+  .savedAffirmations .affirmation {
+    font-size: 1.5rem;
+  }
+
+  .savedAffirmations .affirmation {
+    text-align: center;
+    margin-right: 0;
+    padding: 4% 0;
+    /* margin-bottom: 2%; */
+  }
+
+  .savedAffirmations li {
+    flex-direction: column-reverse;
+  }
+
+  .removeButton {
+    margin-bottom: 2%;
+  }
+
+  footer p {
+    padding: 2% 4%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 85%;
+  }
+  
+  header h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 5%;
+  }
+
+  .affirmation,
+  .savedAffirmations .affirmation {
+    line-height: 1.8rem;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .number {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header h3 {
+    margin-bottom: 3%;
+  }
+
+  button,
+  .removeButton {
+    font-size: 0.8rem;
+  }
+
+  .savedAffirmations h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
 }
