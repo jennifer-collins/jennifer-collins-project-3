@@ -123,7 +123,7 @@ function App() {
         />
       </main>
       <footer>
-        <p>Created by <a href="https://github.com/jennifer-collins" target="blank" rel="noopener">Jennifer Collins</a> at <a target="_blank" rel="noopener" href="https://junocollege.com/">Juno College</a></p>
+        <p>Created by <a href="https://github.com/jennifer-collins" target="blank" rel="noopener noreferrer">Jennifer Collins</a> at <a target="_blank" rel="noopener noreferrer" href="https://junocollege.com/">Juno College</a></p>
       </footer>
     </div>
   );
