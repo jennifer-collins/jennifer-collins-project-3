@@ -1,5 +1,4 @@
 function SavedAffirmations(props) {
-    console.log(props.savedPhrases);
     return(
         <section className="savedAffirmations">
             <h3>saved affirmations</h3>

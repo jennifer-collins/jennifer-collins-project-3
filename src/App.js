@@ -25,7 +25,6 @@ function App() {
       method: "GET",
       dataResponse: "json"
     }).then( (dataResponse) => {
-      console.log(dataResponse);
       
       // This is saving the data from the API in state
       setAffirmationData(dataResponse.data)
@@ -34,13 +33,9 @@ function App() {
 
   const handleClick = () => {
     console.log('I am clicked!');
-    // console.log(affirmationData[2]);
-    // on click randomizer function will run - using math.random to
     const randomAffirmation = affirmationData[Math.floor(Math.random()*affirmationData.length)]
-    console.log(randomAffirmation);
     setAffirmation(randomAffirmation.phrase)
   }
-  console.log(affirmation);
 
 
   //FIREBASE
@@ -49,7 +44,6 @@ function App() {
     const database = getDatabase(firebase)
     const dbRef = ref(database)
     onValue(dbRef, (response) => {
-      console.log(response.val());
       const savedArray = []
       const data = response.val()
       for (let propertyName in data) {
@@ -57,12 +51,10 @@ function App() {
         key: propertyName,
         name: data[propertyName]
       });
-      console.log(savedArray);
     }
     setReturnedPhrases(savedArray);
     });
   }, [])
-  console.log(returnedPhrases);
 
 
   const handleFirebase = () => {
@@ -70,7 +62,6 @@ function App() {
     const database = getDatabase(firebase)
     const dbRef = ref(database)
     push(dbRef, affirmation)
-    // console.log(affirmation);
   }
 
   const handleRemovePhrase = (phraseKey) => {

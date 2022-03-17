@@ -1,20 +1,6 @@
 // import {useEffect, useState} from 'react'
 
 function DisplayAffirmations(props) {
-    console.log(props);
-    // console.log(props.emptyPhrase);
-    // const emptyPhrase = props.affirmationPhrase
-
-    // const [displayPhrase, setDisplayPhrase] = useState(false)
-    
-    // useEffect(() => {
-    //     if (props.affirmationPhrase == "") {
-    //         setDisplayPhrase(false)
-    //     } else {
-    //         setDisplayPhrase(true)
-    //     }
-
-    // }, [props])
     
     return(
         <section className='displayAffirmations'>

@@ -186,16 +186,12 @@ button:focus {
   /* padding: 2% 0; */
 }
 
-/* .displayAffirmations p {
-  padding: 5% 2%;
-} */
-
 .savedAffirmations {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5% 0;
-  padding: 5% 0;
+  padding: 5% 5%;
   background-color: rgba(216,214,219,0.6);
 }
 
