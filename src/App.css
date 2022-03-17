@@ -30,9 +30,8 @@ html {
 }
 
 body {
-  /* background-image: url(../assets/manik-roy-yGx-xAGwHQs-unsplash.jpg); */
   background-image: url(../assets/loretta-rosa-wAEWQ8J-kXw-unsplash.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -86,44 +85,6 @@ p {
   text-align: center;
 }
 
-/* .typewriter {
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-} */
-
-/* The typing effect */
-/* @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-} */
-
-/* The typewriter cursor effect */
-/* @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-} */
-
-/* .appDescription p {
-  line-height: 2em;
-} */
-
-/* .appDescription {
-  Lined background
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
-  background-size: 100% 2em;
-
-  Display the content on top of the lines. The line height must be the same as the background size defined above
-  background-position-y: 24px;
-  line-height: 2em;
-} */
-
-
 /* General Styles */
 
 header {
@@ -140,7 +101,8 @@ header {
   flex-direction: column;
   /* width: 70%; */
   margin-bottom: 2%;
-  text-align: center;  
+  text-align: center;
+  padding: 0 5%;  
 }
 
 .buttonComponent {
@@ -177,6 +139,28 @@ button:focus {
   border: 2px solid #580939;
 }
 
+/* SavedAffirmations.js Button Styling */
+
+.removeButton {
+    color: #580939;
+    background-color: transparent;
+    padding: 2% 4%;
+    border: 2px solid #580939;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.removeButton:hover,
+.removeButton:focus {
+  background-color: #580939;
+  color: #FFF;
+  border: 2px solid #580939;
+}
 
 .displayAffirmations {
   display: flex;
@@ -186,11 +170,6 @@ button:focus {
   /* justify-content: center; */
   margin: 5% 0;
   background-color: rgba(216,214,219,0.6);
-  /* background-image: url('../assets/loretta-rosa-wAEWQ8J-kXw-unsplash.jpg');
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* box-shadow: 5px 5px #B9B7C6; */
-  /* height: 20vh; */
   padding: 2% 0;
 }
 
@@ -207,9 +186,18 @@ button:focus {
   background-color: rgba(216,214,219,0.6);
 }
 
+.savedAffirmations li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .savedAffirmations .affirmation {
-  padding: 1%;
-  margin-bottom: 1%;
+  /* padding: 1%; */
+  /* margin-bottom: 1%; */
+  margin-bottom: 0;
+  margin-right: 30px;
 }
 
 footer p {
